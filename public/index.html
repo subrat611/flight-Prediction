@@ -17,64 +17,69 @@
     <div class="container bg-gray-200 w-screen h-screen flex flex-col items-center justify-center">
         <img src="../img/takeoff.png" alt="logo" class="w-16 h-20">
         
+        <form action="#">
+
         <!-- passengers information -->
         <div class="flex flex-col items-center justify-around h-80">
+        
+
+                <!-- source address box -->
+                <div class="addr__box">
+                    <input type="text" name="source" class="addr_input outline-none w-80 p-3 rounded bg-gray-100 capitalize shadow" placeholder="Where from?">
+    
+                    <div class="dropdown src bg-gray-200">
+                        <i class="fas fa-arrow-left"></i>
+    
+                        <input type="text" name="source" id="source-addr" class="outline-none w-80 p-3 mx-auto mt-5 block rounded bg-gray-100 capitalize shadow" placeholder="Where from?">
+    
+                        <div class="dropdown__list src mt-5">
+                            <option value="Delhi">Delhi</option>
+                            <option value="New Delhi">New Delhi</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Cochin">Cochin</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Destination address box -->
+                <div class="addr__box">
+                    <input type="text" name="destination" class="addr_input outline-none w-80 p-3 rounded bg-gray-100 capitalize shadow" placeholder="Where to?">
+    
+                    <div class="dropdown desti bg-gray-200">
+                        <i class="fas fa-arrow-left"></i>
+                        <input type="text" name="destination" id="destination-addr" class="outline-none w-80 p-3 mx-auto mt-5 block rounded bg-gray-100 capitalize shadow" placeholder="Where to?">
+                        <div class="dropdown__list desti mt-5">
+                            <option value="Delhi">Delhi</option>
+                            <option value="New Delhi">New Delhi</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Cochin">Cochin</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Date -->
+                <div class="bg-gray-100 rounded shadow py-2 flex flex items-center relative mt-10">
+                    <div class="departure date" >
+                        <label for="date_to_travel">Departure date</label>
+                        <input type="date" placeholder="Departure date" name="dateToTravel" id="date_to_travel" class="bg-transparent p-2 outline-none">
+                    </div>
+                    <span class="inline-block w-0.5 h-6 bg-gray-500"></span>
+                    <div class="return date">
+                        <label for="date_to_return">Return date</label>
+                        <input type="date" placeholder="Return date" name="dateToReturn" id="date_to_return" class="bg-transparent p-2 outline-none">
+                    </div>
+                </div>
+    
+                <button class="submit rounded bg-blue-600 py-2 px-5 text-white" id="search-for-flight">Search</button>
+            </div>
             
-            <!-- source address box -->
-            <div class="addr__box">
-                <input type="text" name="source" class="addr_input outline-none w-80 p-3 rounded bg-gray-100 capitalize shadow" placeholder="Where from?">
-
-                <div class="dropdown src bg-gray-200">
-                    <i class="fas fa-arrow-left"></i>
-
-                    <input type="text" name="source" id="source-addr" class="outline-none w-80 p-3 mx-auto mt-5 block rounded bg-gray-100 capitalize shadow" placeholder="Where from?">
-
-                    <div class="dropdown__list src mt-5">
-                        <option value="Delhi">Delhi</option>
-                        <option value="New Delhi">New Delhi</option>
-                        <option value="Kolkata">Kolkata</option>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Chennai">Chennai</option>
-                        <option value="Cochin">Cochin</option>
-                        <option value="Hyderabad">Hyderabad</option>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Destination address box -->
-            <div class="addr__box">
-                <input type="text" name="destination" class="addr_input outline-none w-80 p-3 rounded bg-gray-100 capitalize shadow" placeholder="Where to?">
-
-                <div class="dropdown desti bg-gray-200">
-                    <i class="fas fa-arrow-left"></i>
-                    <input type="text" name="destination" id="destination-addr" class="outline-none w-80 p-3 mx-auto mt-5 block rounded bg-gray-100 capitalize shadow" placeholder="Where to?">
-                    <div class="dropdown__list desti mt-5">
-                        <option value="Delhi">Delhi</option>
-                        <option value="New Delhi">New Delhi</option>
-                        <option value="Kolkata">Kolkata</option>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Chennai">Chennai</option>
-                        <option value="Cochin">Cochin</option>
-                        <option value="Hyderabad">Hyderabad</option>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Date -->
-            <div class="bg-gray-100 rounded shadow py-2 flex flex items-center relative mt-10">
-                <div class="departure date" >
-                    <label for="date_to_travel">Departure date</label>
-                    <input type="date" placeholder="Departure date" name="dateToTravel" id="date_to_travel" class="bg-transparent p-2 outline-none">
-                </div>
-                <span class="inline-block w-0.5 h-6 bg-gray-500"></span>
-                <div class="return date">
-                    <label for="date_to_return">Return date</label>
-                    <input type="date" placeholder="Return date" name="dateToReturn" id="date_to_return" class="bg-transparent p-2 outline-none">
-                </div>
-            </div>
-
-            <button class="rounded bg-blue-600 py-2 px-5 text-white" id="search-for-flight">Search</button>
-        </div>
+        </form>
     </div>
 
     <script src="../src/index.js"></script>
