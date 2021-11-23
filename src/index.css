@@ -1,0 +1,45 @@
+.container{
+    position: relative;
+}
+
+.dropdown{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 3rem;
+    opacity: 0;
+    transform: translateY(-10000px) scale(0);
+    transition: transform 700ms ease-out;
+}
+
+.dropdown.show{
+    transform: scale(1);
+    opacity: 1;
+    z-index: 1000;
+}
+
+.addr__box i.fas{
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    cursor: pointer;
+}
+
+.dropdown option{
+    cursor: pointer;
+    padding: 1rem 2rem;
+}
+
+
+.dropdown__list option:hover{
+    background-color: gainsboro;
+}
+
+
+/* date label */
+.date label{
+    position: absolute;
+    top: -2em;
+}
